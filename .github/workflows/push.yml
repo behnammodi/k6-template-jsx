@@ -23,4 +23,4 @@ jobs:
       - name: Run local k6 test
         uses: grafana/k6-action@v0.2.0
         with:
-          filename: dist/get-200-status-test.js
+          filename: dist/home-page.test.js
