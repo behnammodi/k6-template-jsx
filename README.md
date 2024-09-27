@@ -1,34 +1,14 @@
 <div align="center">
-  
-  ![banner](docs/ts-js-k6.png)
-
-# Template to use TypeScript with k6
-
-![.github/workflows/push.yml](https://github.com/grafana/k6-template-typescript/workflows/.github/workflows/push.yml/badge.svg?branch=main)
-
+# Template to use JSX with k6
 </div>
 
-This repository provides a scaffolding project to start using TypeScript in your k6 scripts.
+## Using JSX Syntax
 
-## Rationale
+You can use JSX syntax to implement all components you have by using the [jsx-to-call](https://github.com/behnammodi/jsx-to-call) module. This allows you to write your components in a more declarative and readable way.
 
-While JavaScript is great for a myriad of reasons, one area where it fall short is type safety and developer ergonomics. It's perfectly possible to write JavaScript code that will look OK and behave OK until a certain condition forces the executor into a faulty branch.
-
-While it, of course, still is possible to shoot yourself in the foot with TypeScript as well, it's significantly harder. Without adding much overhead, TypeScript will:
-
-- Improve the ability to safely refactor your code.
-- Improve readability and maintainability.
-- Allow you to drop a lot of the defensive code previously needed to make sure consumers are calling functions properly.
-
+This repository provides a scaffolding project to start using JSX in your k6 scripts.
 
 ## Installation
-
-**Creating a project from the `template-typescript` template**
-
-To generate a TypeScript project that includes the dependencies and initial configuration, navigate to the [template-typescript](https://github.com/grafana/k6-template-typescript) page and click **Use this template**.
-
-  ![](docs/use-this-template-button.png)
-
 
 **Install dependencies**
 
@@ -40,9 +20,9 @@ npm install
 
 ## Running the test
 
-To run a test written in TypeScript, we first have to transpile the TypeScript code into JavaScript running a bundler. This project uses `Babel` and `Webpack` to bundle the different files into ES modules (ESM), using its [`webpack.config.js`](./webpack.config.js) configuration.
+To run a test written in JSX, we first have to transpile the TypeScript and JSX code into JavaScript running a bundler. This project uses `Babel` and `Webpack` to bundle the different files into ES modules (ESM), using its [`webpack.config.js`](./webpack.config.js) configuration.
 
-The next command transforms each TypeScript test in `./src` to the `./dist` folder as ES modules.
+The next command transforms each TSX test in `./src` to the `./dist` folder as ES modules.
 
 ```bash
 npm run bundle
@@ -51,11 +31,10 @@ npm run bundle
 Once that is done, we can run our script the same way we usually do, for instance:
 
 ```bash
-k6 run dist/get-200-status-test.js
+k6 run dist/home-page.test.js
 ```
 
 **See also**
 
-- [Using k6 / Modules](https://grafana.com/docs/k6/latest/using-k6/modules/)
-- [Using k6 / JavaScript compatibility mode](https://grafana.com/docs/k6/latest/using-k6/javascript-compatibility-mode/)
-- [grafana/k6-rollup-example](https://github.com/grafana/k6-rollup-example)
+- [jsx-to-call](https://github.com/behnammodi/jsx-to-call)
+
