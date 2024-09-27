@@ -1,8 +1,4 @@
-<div align="center">
-# Template to use JSX with k6
-</div>
-
-## Using JSX Syntax
+## Using JSX Syntax with k6
 
 You can use JSX syntax to implement all components you have by using the [jsx-to-call](https://github.com/behnammodi/jsx-to-call) module. This allows you to write your components in a more declarative and readable way. something like:
 
