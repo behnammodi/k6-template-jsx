@@ -4,7 +4,19 @@
 
 ## Using JSX Syntax
 
-You can use JSX syntax to implement all components you have by using the [jsx-to-call](https://github.com/behnammodi/jsx-to-call) module. This allows you to write your components in a more declarative and readable way.
+You can use JSX syntax to implement all components you have by using the [jsx-to-call](https://github.com/behnammodi/jsx-to-call) module. This allows you to write your components in a more declarative and readable way. something like:
+
+```jsx
+export default () => {
+  return JSX.call(
+    <HomePage>
+      <Header />
+      <Banner />
+      <Footer />
+    </HomePage>
+  );
+};
+```
 
 This repository provides a scaffolding project to start using JSX in your k6 scripts.
 
