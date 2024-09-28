@@ -14,6 +14,20 @@ export default () => {
 };
 ```
 
+and `HomePage` component looks like:
+```jsx
+export const HomePage: FC = ({ children }) => {
+  const res = http.get('https://example.com/');
+
+  check(res, {
+    'state is 200': r => r.status === 200
+  });
+
+  // Will perform <Header />, <Banner /> and <Footer /> if status is 200
+  return res.status === 200 ? children : null
+};
+```
+
 This repository provides a scaffolding project to start using JSX in your k6 scripts.
 
 ## Installation
